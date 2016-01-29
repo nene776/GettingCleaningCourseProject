@@ -23,7 +23,8 @@ Subject (integer)
     
 A 79-feature vector with time and frequency domain variables (double)
 
-    Every value is the average of the same variable values, regardingly to the same activity and the same subject. Features are normalized and bounded within [-1,1].
+    Every value is the average of the same variable values, regardingly to the same activity and the same subject. 
+    Features are normalized and bounded within [-1,1].
     
 Exactly, the features are:
 
