@@ -44,11 +44,10 @@ littleData$Activity <- activities[littleData$Activity,2]
 ## 5.From the data set in step 4, creates a second, independent tidy data set with the average 
 ## of each variable for each activity and each subject.
 ## I use the dplyr package to perform this task: I transform "littleData" set into a data frame table 
-## (df object), I use group_by and summarise_each functions, and I save the result into a normal data frame.
+## (df object), I use group_by and summarise_each functions, and I save the result into an external txt file.
 if(!"dplyr" %in% installed.packages()){install.packages("dplyr")}
 library(dplyr)
 littleDf <- tbl_df(littleData)
 grouped <- group_by(littleDf, Activity, Subject)
 tidyDf <- summarise_each(grouped, funs(mean))
-tidyData <- data.fame(tidyDf)
-write.table(tidyData, file = "./data/UCI HAR Dataset/tidyData.txt", row.names = FALSE)
+write.table(tidyDf, file = "./data/UCI HAR Dataset/tidyData.txt", row.names = FALSE)
