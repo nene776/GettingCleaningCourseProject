@@ -28,4 +28,4 @@ Already done! During the 1st step we have already labeled the "totalData": the a
 Remark: I choose not to reshape the variable names, like using "time" for "t" or "freq" for "f", because I think the names are already descriptive and enough long. However, a good data set is always accompanied by a code book.
 
 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-I use the dplyr package to perform this task: I transform "littleData" set into a data frame table (df object), I use group_by and summarise_each functions, and I save the result into a normal data frame.
+I use the dplyr package to perform this task: I transform "littleData" set into a data frame table (df object), I use group_by and summarise_each functions, and I save the result into an eternal txt file.
